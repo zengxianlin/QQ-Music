@@ -1,0 +1,17 @@
+<template name="player">
+    <view class="M-player">
+        <view class="M-playSongImg">
+            <image src="../image/banner1.jpg"></image>
+        </view>
+        <view class="M-playSong">嗨歌嗨歌嗨歌嗨歌嗨歌嗨歌嗨歌嗨歌嗨歌嗨歌嗨歌嗨歌嗨歌</view>
+        <view class="M-playerSuspend">
+            <view class="M-playerPause M-playerKey">
+                <image src="../image/icon/pause.png"></image>
+            </view>
+            <view class="M-playerPlay M-playerKey">
+                <image src="../image/icon/play.png"></image>
+            </view>
+        </view>
+        <!-- <text>{{text}}</text> -->
+    </view>
+</template>

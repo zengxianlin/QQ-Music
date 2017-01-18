@@ -1,0 +1,94 @@
+<template name="switch">
+    <view class="M-switch">
+        <view class="M-hall {{ index == 1 ? 'M-table' : ''}}" >
+            <view class="M-swiper">
+                <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+                    <block wx:for="{{imgUrls}}">
+                        <swiper-item>
+                            <image src="{{item}}" class="slide-image" />
+                        </swiper-item>
+                    </block>
+                </swiper>
+            </view>
+            <view class="M-nav-list">
+                <view class="M-league">
+                  <image src="./../image/icon/singer.png"></image>
+                  <text>歌手</text>
+                </view>
+                <view class="M-league">
+                  <image src="./../image/icon/ranking.png"></image>
+                  <text>排行</text>
+                </view>
+                <view class="M-league">
+                  <image src="./../image/icon/airwaves.png"></image>
+                  <text>电台</text>
+                </view>
+                <view class="M-league">
+                  <image src="./../image/icon/classify.png"></image>
+                  <text>分类歌单</text>
+                </view>
+                <view class="M-league">
+                  <image src="./../image/icon/MV.png"></image>
+                  <text>视频MV</text>
+                </view>
+                <view class="M-league">
+                  <image src="./../image/icon/special.png"></image>
+                  <text>数字专辑</text>
+                </view>
+            </view>
+            <view class="M-hot">
+                <view class="M-hot-title">
+                    <text>热门推荐</text>
+                    <view class="M-arrow">
+                        <image src="./../image/icon/arrow.png"></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="M-my {{ index == 0 ? 'M-table' : ''}}">
+        <view class="M-swiper">
+                <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+                    <block wx:for="{{imgUrls}}">
+                        <swiper-item>
+                            <image src="{{item}}" class="slide-image" />
+                        </swiper-item>
+                    </block>
+                </swiper>
+            </view>
+            <view class="M-nav-list">
+                <view class="M-league">
+                  <image src="./../image/icon/singer.png"></image>
+                  <text>歌手</text>
+                </view>
+                <view class="M-league">
+                  <image src="./../image/icon/ranking.png"></image>
+                  <text>排行</text>
+                </view>
+                <view class="M-league">
+                  <image src="./../image/icon/airwaves.png"></image>
+                  <text>电台</text>
+                </view>
+                <view class="M-league">
+                  <image src="./../image/icon/classify.png"></image>
+                  <text>分类歌单</text>
+                </view>
+                <view class="M-league">
+                  <image src="./../image/icon/MV.png"></image>
+                  <text>视频MV</text>
+                </view>
+                <view class="M-league">
+                  <image src="./../image/icon/special.png"></image>
+                  <text>数字专辑</text>
+                </view>
+            </view>
+            <view class="M-hot">
+                <view class="M-hot-title">
+                    <text>热门推荐</text>
+                    <view class="M-arrow">
+                        <image src="./../image/icon/arrow.png"></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>

@@ -1,0 +1,46 @@
+<!--index.wxml-->
+<view class="page">
+    <view class="container page-top" bindtouchmove="tap_drag" bindtouchstart="tap_start" style="{{translate}}">
+        <view class="M-header">
+            <!-- 标题栏 -->
+            <view class="M-nav">
+                <view class="M-menu" bindtap="tap_ch"><image src="./../image/icon/menu.png"></image></view>
+                <view class="M-title">
+                    <text bindtap="bindMy" data-index="0" class="{{ index == 0 ? 'hover' : '' }}">我的</text>
+                    <text bindtap="bindHall" data-index="1" class="{{ index == 1 ? 'hover' : '' }}">音乐馆</text>
+                </view>
+                <view class="M-identify"><image src="./../image/icon/identify.png"></image></view>
+            </view>
+            <!-- 搜索栏 -->
+            <view class="M-search">
+                <view class="weui-search-bar">
+                    <view class="weui-search-bar__form">
+                        <view class="weui-search-bar__box">
+                            <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                            <input type="text" class="weui-search-bar__input" placeholder="搜索" value="  {{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+                            <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="  clearInput">
+                                <icon type="clear" size="14"></icon>
+                            </view>
+                        </view>
+                        <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+                            <icon class="weui-icon-search" type="search" size="14"></icon>
+                            <view class="weui-search-bar__text">搜索</view>
+                        </label>
+                    </view>
+                    <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput"  >取消</view>
+                </view>
+            </view>
+        </view>
+
+        <!-- 切换栏 -->
+        <import src="../switch/index.wxml"/>
+        <template is="switch" data="{{index,imgUrls,indicatorDots,autoplay,interval,duration}}"/>
+
+        <!-- 播放器 -->
+        <import src="../player/index.wxml"/>
+        <template is="player" data="{{text: 'forbar'}}"/>
+    </view>
+    <view class="contaLeft" >
+ <!-- bindtouchend="tap_end" -->
+    </view>
+</view>

@@ -1,0 +1,12 @@
+@import 'styles/weui.wxss';
+@import 'styles/prompt.wxss';
+@import 'styles/skyvow.wxss';
+/**app.wxss**/
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background-color:#f4f4f4;
+}
